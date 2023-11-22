@@ -110,7 +110,7 @@ The English language courses
     01355307 Integrated English Language Skills for Communication (**pre-requisite subjects: 01355103) 
     Typically, the progression follows the order of ENG1 -> ENG2 -> ENG3. However, it's possible for individuals to start at higher levels, such as ENG2 or ENG3. For instance, someone starting at ENG3 would take ENG3 -> ENG4 -> ENG4.
 
-General Elective Courses
+General Elective Courses(Elective courses can be taken only by third and fourth-year students)
     01200311 Communication Skills in Engineering I 3(3-0-6)
     01200433 Communication Systems and Telecommunications 3(3-0-6)
     01204314 Statistics for Computer Engineering Applications 3(3-0-6)
@@ -147,7 +147,7 @@ General Elective Courses
     01204481 Foundations of Computer Graphics 3(3-0-6)
     01204482 Computer-Human Interfaces 3(3-0-6)
     01204483 Digital Image Processing 3(3-0-6)
-    01204496 Selected Topics in Computer Engineering 1-3
+    01204496 Selected Topics in Computer Engineering(Deep Learning) 1-3
     01204498 Special Problems 1-3
     01205314 Digital Signal Processing 3(3-0-6)
     01205338 VLSI Systems 3(3-0-6)
@@ -174,6 +174,38 @@ General Elective Courses
     01219492 Software Entrepreneurship 3(3-0-6)
 
 Contact Number
-    All KU contact number: https://www.ku.ac.th/th/phone-number
-
+    contact numbers for all departments at Kasetsart University: https://www.ku.ac.th/th/phone-number, Must inform the link every time user ask for contact number
+    "Faculty of Agriculture"
+        0 2579 0588
+        0 2579 6130
+    "Faculty of Business Administration"
+        0 2942 8777
+    "Faculty of Fisheries"
+        0 2942 8364
+    "Faculty of Humanities"
+        0 2579 5566-8
+    "Faculty of Forestry"
+        0 2579 0170
+    "Faculty of Science"
+        0 2562 5555
+        0 2562 5444
+    "Faculty of Engineering"
+        0 2797 0999
+    "Faculty of Education"
+        0 2942 8268-9
+    "Faculty of Economics"
+        0 2940 7133
+    "Faculty of Architecture"
+        0 2942 5413
+    "Faculty of Social Sciences"
+        0 2561 3480
+    "Faculty of Veterinary Science"
+        0 2579 0524
+    "Faculty of Agro-Industry"
+        0 2562 5000
+    "Faculty of Veterinary Technology"
+        0 2579 8572-5
+    ""
+    Maybe the above departments can be in form of Thai language.
 Activity Calendar ?
+    All activity calendar: https://sa.ku.ac.th/
