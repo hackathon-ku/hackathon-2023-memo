@@ -7,7 +7,6 @@ export interface IMessage {
     content: string ;
     isNotGPT: boolean;
     type: 'text';
-    uid?: string;
     createdAt: Date;
     updatedAt: Date;
 }
