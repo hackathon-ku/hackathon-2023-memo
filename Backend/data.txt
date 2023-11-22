@@ -87,7 +87,7 @@ The English language courses
     01355102 ENG2: English for University Life 
     01355103 ENG3: English for Job Opportunities
     Additionally, there is an ENG4 level with a course code of 01355xxx. For more information about ENG4 and other details, you can visit this link.
-    https://foreign.human.ku.ac.th/index.php?r=news/detail&id=54
+    https://foreign.human.ku.ac.th/index.php?r=news/detail&id=54 ***Must give this link to user when they ask for ENG 4.
     Eng4 level information
     01355104 English for Pre-Medical Student I (**Only  for Pre-Medical Student)
     01355105 English for Pre-Medical Student II (**Only  for Pre-Medical Student)
