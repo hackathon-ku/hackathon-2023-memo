@@ -32,6 +32,7 @@ router.get('/:chat_id', async (req, res) => {
     }
 })
 
+// Create chat with chatname
 router.post('/create/:chatname', async (req, res) => {
     try{
         const chatname = req.params?.chatname
