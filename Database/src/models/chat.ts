@@ -23,7 +23,7 @@ const chatSchema = new Schema<IChatDocument, IChatDocument>(
   {
     _id: {
       type: String,
-      default: () => uuidv4(),
+      required: true,
     },
     name: {
       type: String,
