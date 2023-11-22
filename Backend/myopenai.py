@@ -57,13 +57,13 @@ def wait_on_run(run, thread):
         time.sleep(0.5)
     return run
 
-thread1, run1 = create_thread_and_run(
-    "I don't like math. What can I do?"
-)
+# thread1, run1 = create_thread_and_run(
+#     "I don't like math. What can I do?"
+# )
 
 # Wait for Run 1
-run1 = wait_on_run(run1, thread1)
-print(get_GPT_response(thread1))
+# run1 = wait_on_run(run1, thread1)
+# print(get_GPT_response(thread1))
 # pretty_print(get_response(thread1))
 
 # run2 = submit_message(os.getenv("ASSISTANT_ID"), thread1, "Thank you!")

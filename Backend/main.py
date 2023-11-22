@@ -25,8 +25,8 @@ def login(loginData: LoginSchema):
     try:
         response = requests.post(os.getenv("MONGODB") + "/user/get", json={"username": loginData.username, "password": loginData.password})
         if response.status_code == 200:
-            chatdata = response.json()
-            content = {"chat": chatdata, "isauth": True}
+            content = response.json()
+            content["is_auth"] = True 
             return JSONResponse(status_code=response.status_code, content=content)
         return JSONResponse(status_code=response.status_code, content={"isauth": False})
     except:
