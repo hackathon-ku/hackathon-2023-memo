@@ -32,6 +32,7 @@ const History = () => {
       <div className="flex-grow overflow-y-scroll max-h-[100%] ">
         <div className="p-4">
           <SearchInput/>
+          <SearchInput/>
         </div>
       </div>
     </div>
