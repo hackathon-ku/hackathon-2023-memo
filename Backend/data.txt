@@ -85,10 +85,29 @@ Computer Engineering Course
 The English language courses
     01355101 ENG1: English for Everyday Life 
     01355102 ENG2: English for University Life 
-    01355103 ENG3: English for Job Opportunities 
+    01355103 ENG3: English for Job Opportunities
     Additionally, there is an ENG4 level with a course code of 01355xxx. For more information about ENG4 and other details, you can visit this link.
     https://foreign.human.ku.ac.th/index.php?r=news/detail&id=54
-
+    Eng4 level information
+    01355104 English for Pre-Medical Student I (**Only  for Pre-Medical Student)
+    01355105 English for Pre-Medical Student II (**Only  for Pre-Medical Student)
+    01355106 Communicative English  in Medicine (**Only  for Pre-Medical Student) (**pre-requisite subjects: 01355105)
+    01355107 Essential English Writing Skills (**pre-requisite subjects: 01355103)
+    01355108 English and Culture through Songs (**pre-requisite subjects: 01355103)
+    01355109 Essential English Listening-Speaking Skills (**pre-requisite subjects: 01355103)
+    01355119 Essential English Reading Skills (**pre-requisite subjects: 01355103)
+    01355121 English Words and Pronunciation (**pre-requisite subjects: 01355103)
+    01355201 Critical Reading and Writing in English (**pre-requisite subjects: 01355103)
+    01355202 Report Writing in English (**pre-requisite subjects: 01355103)
+    01355203 English Language Structure (**pre-requisite subjects: 01355103)
+    01355204 Project Presentation in English (**pre-requisite subjects: 01355103)
+    01355205 Reading for Mass Communication in English (**pre-requisite subjects: 01355103)
+    01355206 Academic English (**pre-requisite subjects: 01355103) (**This course is open to students in the specified major)
+    01355207 English Correspodence  (**pre-requisite subjects: 01355103)
+    01355208 English Skill Development through Games (**pre-requisite subjects: 01355103)
+    01355209 Communicative English for Careers (**pre-requisite subjects: 01355103)
+    01355303 English for Employment (**pre-requisite subjects: 01355103)
+    01355307 Integrated English Language Skills for Communication (**pre-requisite subjects: 01355103) 
     Typically, the progression follows the order of ENG1 -> ENG2 -> ENG3. However, it's possible for individuals to start at higher levels, such as ENG2 or ENG3. For instance, someone starting at ENG3 would take ENG3 -> ENG4 -> ENG4.
 
 General Elective Courses
