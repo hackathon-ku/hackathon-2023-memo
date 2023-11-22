@@ -50,11 +50,23 @@ const Message: React.FC<MessageProps> = ({
           isNotGPT ? 'bg-teal-600 text-white' : 'bg-gray-200 text-black'
         }`}
       >
-        <p className={"text-sm text-gray-600"+(isNotGPT ? 'bg-teal-600 text-white' : 'bg-gray-200 text-black')}>{username}</p>
+        <p className={"text-sm text-gray-600"+(isNotGPT ? 'bg-teal-600 text-white text-right ' : 'bg-gray-200 text-black')}>{username}</p>
         <p className="whitespace-pre-line">{content as string}</p>
       </div>
     </div>
   );
 };
+export const  testData : MessageProps[]=[
+  {
+    username:"KU Assistant",
+    content:"Hello, I'm KU Assistant. How can I help you?",
+    isNotGPT:false
 
+  },
+  {
+    username:"test",
+    content:"I want to know what is cat",
+    isNotGPT:true
+  }
+]
 export default Message;

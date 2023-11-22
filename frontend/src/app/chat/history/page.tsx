@@ -7,7 +7,8 @@ import { useEffect, useState } from 'react';
 import { IoCloseOutline } from 'react-icons/io5';
 import { useRouter } from 'next/navigation';
 import SearchInput from '../../../components/SearchBar';
-
+import CardHistory from '../../../components/history/CardHistory';
+const testdata =["แนะนำวิชาตัวต่อของวิชาEng 4 หน่อย","ฉันจะได้เรียนวิชาระบบปฏิบัติการตอนปีไหน"]
 const History = () => {
   const router = useRouter();
   const [isReady, setIsReady] = useState(false);
@@ -15,7 +16,7 @@ const History = () => {
   useEffect(() => {
     setIsReady(true);
   }, []);
-
+  const [data, setData] = useState(testdata);
   return (
     <div className="flex flex-col w-screen h-screen ">
       <div className="h-[10%] flex  justify-around items-center bg-neutral-200 ">
@@ -31,8 +32,19 @@ const History = () => {
       </div>
       <div className="flex-grow overflow-y-scroll max-h-[100%] ">
         <div className="p-4">
-          <SearchInput/>
-          <SearchInput/>
+          <SearchInput className='h-14 mb-14'/>
+          {
+            data.map((item,index) => {
+              return (
+                <div key={index} className='mb-4'>
+                  <CardHistory name={item} />
+                </div>
+                
+              )
+            }
+            )
+          }
+          <CardHistory/>
         </div>
       </div>
     </div>
