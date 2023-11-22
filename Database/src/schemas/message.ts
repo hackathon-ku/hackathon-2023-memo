@@ -7,3 +7,5 @@ export const createSchema = z.object({
     type: z.string(),
     chatid: z.string(),
   })
+
+  export type createSchema = z.infer<typeof createSchema>
