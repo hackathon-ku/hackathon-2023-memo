@@ -31,31 +31,31 @@ router.get('/:chat_id', async (req, res) => {
     }
 })
 
-router.post('/create/:tid/:chatname', async (req, res) => {
+router.post('/create/:chatname', async (req, res) => {
     try{
-        const tid = req.params?.tid
         const chatname = req.params?.chatname
-        if (!tid) {
-            return res.status(400).send('Body not match')
-        }
-
-        const chatData: IChat = {
-            _id: tid,
-            name: chatname,
-            messages: [],
-            createdAt: new Date(),
-            updatedAt: new Date(),
+        if (!chatname) {
+            return res.status(400).send('Param not match')
         }
         const messageData = createSchema.safeParse(req.body)
         if (!messageData.success) {
             return res.status(400).send('Body not match')
         }
+
+        const chatData: IChat = {
+            _id: messageData.data.chatid,
+            name: chatname,
+            messages: [],
+            createdAt: new Date(),
+            updatedAt: new Date(),
+        }
+        
         const msg = await Message.create({
             username: messageData.data.username,
             content: messageData.data.content,
             isNotGPT: messageData.data.isNotGPT,
             type: messageData.data.type,
-            chatid: tid,
+            chatid: messageData.data.chatid,
             createdAt: new Date(),
             updatedAt: new Date(),
         })
@@ -67,6 +67,7 @@ router.post('/create/:tid/:chatname', async (req, res) => {
         if (!chat) {
             return res.status(400).send('Chat not found')
         }
+        return res.status(200).send(chat)
     } catch (error) {
         return res.status(500).send(error)
     }
