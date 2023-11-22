@@ -87,7 +87,7 @@ The English language courses
     01355102 ENG2: English for University Life 
     01355103 ENG3: English for Job Opportunities
     Additionally, there is an ENG4 level with a course code of 01355xxx. For more information about ENG4 and other details, you can visit this link.
-    https://foreign.human.ku.ac.th/index.php?r=news/detail&id=54
+    https://foreign.human.ku.ac.th/index.php?r=news/detail&id=54 ***Must give this link to user when they ask for ENG 4.
     Eng4 level information
     01355104 English for Pre-Medical Student I (**Only  for Pre-Medical Student)
     01355105 English for Pre-Medical Student II (**Only  for Pre-Medical Student)
@@ -110,7 +110,7 @@ The English language courses
     01355307 Integrated English Language Skills for Communication (**pre-requisite subjects: 01355103) 
     Typically, the progression follows the order of ENG1 -> ENG2 -> ENG3. However, it's possible for individuals to start at higher levels, such as ENG2 or ENG3. For instance, someone starting at ENG3 would take ENG3 -> ENG4 -> ENG4.
 
-General Elective Courses(Elective courses can be taken only by third and fourth-year students)
+General Elective Courses(***Elective courses can be taken only by third and fourth-year students)
     01200311 Communication Skills in Engineering I 3(3-0-6)
     01200433 Communication Systems and Telecommunications 3(3-0-6)
     01204314 Statistics for Computer Engineering Applications 3(3-0-6)
@@ -174,7 +174,7 @@ General Elective Courses(Elective courses can be taken only by third and fourth-
     01219492 Software Entrepreneurship 3(3-0-6)
 
 Contact Number
-    contact numbers for all departments at Kasetsart University: https://www.ku.ac.th/th/phone-number, Must inform the link every time user ask for contact number
+    contact numbers for all departments at Kasetsart University: https://www.ku.ac.th/th/phone-number, ***Must inform the link every time user ask for contact number
     "Faculty of Agriculture"
         0 2579 0588
         0 2579 6130
@@ -205,7 +205,67 @@ Contact Number
         0 2562 5000
     "Faculty of Veterinary Technology"
         0 2579 8572-5
-    ""
-    Maybe the above departments can be in form of Thai language.
+    "Faculty of Environment"
+        0 2579 2116
+        0 2579 2545-6
+    "Graduate School"
+        0 2942 8445-9
+    "School of Integrated Science (SIS)" or College of Integrated Science
+        02-118-0131-2
+        061-509-6710
+    "University Administration"
+        0 2942 8856
+        Consist of
+        -Central Administration Division ***This is departments about public relations of Kasetsart University
+            0 2942 8151-4
+        -Human Resources Division
+            0 2942 8162
+        -Student Affairs Division ***This department is related to disseminating information about students, such as scholarships and activity schedules
+            0 2118 0150-9
+        -Finance Department ***This department is related to Financial of Kasetsart University
+            0 2942 8147
+        -Strategic Management Division
+            0 2942 8158-60
+        -Physical and Environmental Sustainability Division ***This department is related to security,journey and public utilities such as security guard,etc.
+            0 2942 8981-4
+        -International Affairs Division(IAD) *** This department is responsible for overseeing the university's international affairs
+            0 2942 8172
+        -Office of the Legal
+            0 2942 8200-45
+        -KU Sports Art and Culture Division
+            0 2942 8772-3
+        -Office of Quality Development
+            0 2942 8299
+        -Office of the Civil Service Development Committee
+            0 2940 7199
+        -University Hospital, Kasetsart University
+            0 2579 0030
+    "Office of Education Administration" ***This Department Being the central data hub for educational information regarding admissions, courses, teaching management, registration and processing, and data related to all types of students in every project at the university. This is to facilitate the use of information in planning the development of administrative and academic work at the university.
+        0 2118 0100
+    "Extension and Training Office(ETO)" or "Lifelong Learning Development Office(LLLDO)"
+        0 2942 8820-4
+    "Office of Computer Services"
+        0 2562 0951-6
+    "Office of Library"
+        0 2942 8616
+    "KU Research and Development Institute(KURDI)"
+        0 2561 1986
+    "Sirindhorn International Center for Research Development And Technology Transfer"
+        0 2940 5836-40
+    "Office of the University Council"
+        0 2942 8145
+    "Kasetsart University Press" ***This depart is about publishing book and searching
+        0 2940 5501-2
+    "Kasetsart University Cooperative Store LTD"
+        0 2940 5389
+    "Kasetsart University Book Center"
+        0 2942 8063-6
+    ***Emergency Contact: Agricultural Cooperation Center
+        0 2579 5526
+        0 2942 8119
+        0 2942 8222
+        0 81612 0311
+        0 8675 7873
+    ***Maybe the above departments can be in form of Thai language.
 Activity Calendar ?
     All activity calendar: https://sa.ku.ac.th/
