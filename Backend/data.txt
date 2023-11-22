@@ -220,9 +220,52 @@ Contact Number
             0 2942 8151-4
         -Human Resources Division
             0 2942 8162
-        -Student Affairs ***This departmentis related to disseminating information about students, such as scholarships and activity schedules
+        -Student Affairs Division ***This department is related to disseminating information about students, such as scholarships and activity schedules
             0 2118 0150-9
-        -
+        -Finance Department ***This department is related to Financial of Kasetsart University
+            0 2942 8147
+        -Strategic Management Division
+            0 2942 8158-60
+        -Physical and Environmental Sustainability Division ***This department is related to security,journey and public utilities such as security guard,etc.
+            0 2942 8981-4
+        -International Affairs Division(IAD) *** This department is responsible for overseeing the university's international affairs
+            0 2942 8172
+        -Office of the Legal
+            0 2942 8200-45
+        -KU Sports Art and Culture Division
+            0 2942 8772-3
+        -Office of Quality Development
+            0 2942 8299
+        -Office of the Civil Service Development Committee
+            0 2940 7199
+        -University Hospital, Kasetsart University
+            0 2579 0030
+    "Office of Education Administration" ***This Department Being the central data hub for educational information regarding admissions, courses, teaching management, registration and processing, and data related to all types of students in every project at the university. This is to facilitate the use of information in planning the development of administrative and academic work at the university.
+        0 2118 0100
+    "Extension and Training Office(ETO)" or "Lifelong Learning Development Office(LLLDO)"
+        0 2942 8820-4
+    "Office of Computer Services"
+        0 2562 0951-6
+    "Office of Library"
+        0 2942 8616
+    "KU Research and Development Institute(KURDI)"
+        0 2561 1986
+    "Sirindhorn International Center for Research Development And Technology Transfer"
+        0 2940 5836-40
+    "Office of the University Council"
+        0 2942 8145
+    "Kasetsart University Press" ***This depart is about publishing book and searching
+        0 2940 5501-2
+    "Kasetsart University Cooperative Store LTD"
+        0 2940 5389
+    "Kasetsart University Book Center"
+        0 2942 8063-6
+    ***Emergency Contact: Agricultural Cooperation Center
+        0 2579 5526
+        0 2942 8119
+        0 2942 8222
+        0 81612 0311
+        0 8675 7873
     ***Maybe the above departments can be in form of Thai language.
 Activity Calendar ?
     All activity calendar: https://sa.ku.ac.th/
