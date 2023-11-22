@@ -1,0 +1,160 @@
+Computer Engineering Course
+    Year 1 Semester 1:
+        01204111 Computer and Programming 3(2-3-6)
+        01417167 Engineering Mathematics I 3(3-0-6)
+        01420111 General Physics I 3(3-0-6)
+        01420113 Physics Laboratory I 1(0-3-2)
+        01999111 Man and Ethics of Living 2(2-0-4)
+        01999021 Thai Language for Communication 3(3-0-6)
+        English Language Course 3( - - )
+        General Education in Business and Management 3( - - )
+        Total: 21( - - )
+
+    Year 1 Semester 2:
+        01208111 Engineering Drawing 3(2-3-6)
+        01403114 General Chemistry Laboratory 1(0-3-2)
+        01403117 General Chemistry 3(3-0-6)
+        01417168 Engineering Mathematics II 3(3-0-6)
+        01420112 General Physics II 3(3-0-6)
+        01420114 Physics Laboratory II 1(0-3-2)
+        01175xxx Military Science 1(0-2-1)
+        English Language Course 3( - - )
+        General Education in Well-being 3( - - )
+        Total: 21( - - )
+
+    Year 2 Semester 1:
+        01204211 Full Unit Mathematics and Linear Algebra 4(4-0-8)
+        01204212 Abstract Data Types and Problem Solving 3(3-0-6)
+        01204222 Digital System Design 3(3-0-6)
+        01204224 Digital Logic Circuits Laboratory 1(0-3-2)
+        01204312 Probability and Statistics for Computer Engineers 3(3-0-6)
+        01205211 Electrical Circuit Analysis I 3(3-0-6)
+        01219211 Software Development Camp 1(0-3-2)
+        01417267 Engineering Mathematics III 3(3-0-6)
+        Total: 21(19-6-42)
+
+    Year 2 Semester 2:
+        01204214 Problem Solving Laboratory 1(0-3-2)
+        01204223 Engineering Computer Practice 1(0-3-2)
+        01204225 Computer Organization and Components 3(3-0-6)
+        01204271 Introduction to Computer Engineering 1(0-3-2)
+        01204313 Analysis and Design of Algorithms 3(3-0-6)
+        01204351 Database Systems 3(3-0-6)
+        01204371 Signal Processing Transform Techniques 3(3-0-6)
+        01205231 Electronics Circuits and Systems I 3(3-0-6)
+        Total: 18(15-9-36)
+
+    Year 3 Semester 1:
+        01204213 Theory of Computation 3(3-0-6)
+        01204324 Computer Systems Laboratory 1(0-3-2)
+        01204325 Data Communication and Computer Networks 3(3-0-6)
+        01204332 Operating Systems 3(3-0-6)
+        01204341 Software Engineering 4(3-3-8)
+        01205332 Electronics Laboratory 1(0-3-2)
+        01208201 Basic Mechanics for Engineers 3(3-0-6)
+        General Education in Thai Society and World Civilization 2( - - )
+        Elective Course 3( - - )
+        Total: 20( - - )
+
+    Year 3 Semester 2:
+        01204322 Embedded Systems 3(3-0-6)
+        01204391 Professional and Social Skills Development I 1(0-3-2)
+        01204421 Computer Networks 3(3-0-6)
+        English Language Course 3( - - )
+        Elective Course 6( - - )
+        General Education Elective Course 3( - - )
+        Free Elective Course 3( - - )
+        Total: 20( - - )
+
+    Year 4 Semester 1:
+        01204437 Computer System Security 3(3-0-6)
+        01204495 Project Preparation for Computer Engineering 1(0-3-2)
+        01204399 Internship I
+        Elective Course 6( - - )
+        General Education in Thai Politics and Global Politics 3( - - )
+        Total: 14( - - )
+
+    Year 4 Semester 2:
+        01204492 Professional and Social Skills Development II 1(0-3-2)
+        01204499 Computer Engineering Project 2(0-6-3)
+        Elective Course 3( - - )
+        General Education in Social Science 3( - - )
+        Free Elective Course 3( - - )
+        Total: 12( - - )
+
+The English language courses
+    01355101 ENG1: English for Everyday Life 
+    01355102 ENG2: English for University Life 
+    01355103 ENG3: English for Job Opportunities 
+    Additionally, there is an ENG4 level with a course code of 01355xxx. For more information about ENG4 and other details, you can visit this link.
+    https://foreign.human.ku.ac.th/index.php?r=news/detail&id=54
+
+    Typically, the progression follows the order of ENG1 -> ENG2 -> ENG3. However, it's possible for individuals to start at higher levels, such as ENG2 or ENG3. For instance, someone starting at ENG3 would take ENG3 -> ENG4 -> ENG4.
+
+General Elective Courses
+    01200311 Communication Skills in Engineering I 3(3-0-6)
+    01200433 Communication Systems and Telecommunications 3(3-0-6)
+    01204314 Statistics for Computer Engineering Applications 3(3-0-6)
+    01204331 System Software Interface 3(3-0-6)
+    01204342 Managing Software Development 3(3-0-6)
+    01204352 Laws and Ethics in Information Technology 3(3-0-6)
+    01204422 Basic Networks and Network Configuration Laboratory 1(0-3-2)
+    01204423 Network Kernel Architectures and Implementation 3(3-0-6)
+    01204425 Internet System Programming 3(3-0-6)
+    01204426 Advanced Network and Network Configuration 3(2-3-6)
+    01204427 Computer System and Network Security 3(2-3-6)
+    01204428 Wireless Embedded Systems 3(3-0-6)
+    01204429 Wireless Networks and Simulation 3(3-0-6)
+    01204432 Object-Oriented Design 3(3-0-6)
+    01204433 Programming Language Translation 3(3-0-6)
+    01204434 Parallel and Distributed Computing Systems 3(3-0-6)
+    01204435 Programming Language Concepts 3(3-0-6)
+    01204436 Real-time System Engineering 3(3-0-6)
+    01204438 Enterprise Application Architecture 3(3-0-6)
+    01204451 Database System Design 3(3-0-6)
+    01204452 Information Technology Management 3(3-0-6)
+    01204453 Web Information Retrieval and Mining 3(3-0-6)
+    01204454 Management of Technology and Innovation 3(3-0-6)
+    01204456 Social Networks Data Mining 3(3-0-6)
+    01204457 Semantic Web Technology 3(3-0-6)
+    01204458 Introduction to Computation Finance 3(3-0-6)
+    01204461 Artificial Intelligence 3(3-0-6)
+    01204462 Introduction to Expert Systems 3(3-0-6)
+    01204463 Introduction to Natural Language Processing 3(3-0-6)
+    01204464 Computer Vision 3(3-0-6)
+    01204465 Introduction to Data Mining and Knowledge Discovery 3(3-0-6)
+    01204472 Numerical Computation 3(3-0-6)
+    01204473 Mechatronic System and Control 3(3-0-6)
+    01204481 Foundations of Computer Graphics 3(3-0-6)
+    01204482 Computer-Human Interfaces 3(3-0-6)
+    01204483 Digital Image Processing 3(3-0-6)
+    01204496 Selected Topics in Computer Engineering 1-3
+    01204498 Special Problems 1-3
+    01205314 Digital Signal Processing 3(3-0-6)
+    01205338 VLSI Systems 3(3-0-6)
+    01206321 Operations Research for Engineers I 3(3-0-6)
+    01206323 Operations Research for Engineers II 3(3-0-6)
+    01219312 Functional Programming 3(3-0-6)
+    01219322 Electronic Commerce Engineering 3(3-0-6)
+    01219332 Data Warehouse 3(3-0-6)
+    01219333 Introduction to Data Mining 3(3-0-6)
+    01219334 Transaction Processing 3(3-0-6)
+    01219336 Advanced Database 3(3-0-6)
+    01219343 Software Testing 3(3-0-6)
+    01219344 Mobile Software Development 3(3-0-6)
+    01219349 Digital Game Production 3(3-0-6)
+    01219351 Web Application Development 3(3-0-6)
+    01219361 Business Intelligence 3(3-0-6)
+    01219362 Machine Learning 3(3-0-6)
+    01219364 Knowledge Discovery 3(3-0-6)
+    01219421 Cloud Computing Technology and Management 3(3-0-6)
+    01219451 Web Services Technology 3(3-0-6)
+    01219452 Principle of Information Security 3(3-0-6)
+    01219461 Big Data Platform and Analytics 3(3-0-6)
+    01219482 Data Visualization 3(3-0-6)
+    01219492 Software Entrepreneurship 3(3-0-6)
+
+Contact Number
+    All KU contact number: https://www.ku.ac.th/th/phone-number
+
+Activity Calendar ?
