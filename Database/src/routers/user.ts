@@ -3,6 +3,7 @@ import { createSchema, GetSchema } from "../schemas/user";
 import User from "../models/user";
 import { async } from "@firebase/util";
 import Chat from "../models/chat";
+import chat from "../models/chat";
 const bcrypt = require('bcrypt');
 
 const router = express.Router();
@@ -43,9 +44,11 @@ router.post("/get", async (req, res) => {
     if (user) {
       bcrypt.compare(getData.data.password, user.password, async function(err: any, result: any) {
         if (result) {
-          const chat = user.chat_id.map(async (chat_id) => {
+          const chatlist = user.chat_id.map(async (chat_id) => {
+            const chat = await Chat.findById(chat_id);
+            return chat ? {[chat_id] : chat.name} : null; 
           })
-          return res.status(200).send(user);
+          return res.status(200).send(chatlist);
         } else {
           return res.status(400).send('Password not match');
         }
