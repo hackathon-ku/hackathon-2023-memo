@@ -110,7 +110,7 @@ The English language courses
     01355307 Integrated English Language Skills for Communication (**pre-requisite subjects: 01355103) 
     Typically, the progression follows the order of ENG1 -> ENG2 -> ENG3. However, it's possible for individuals to start at higher levels, such as ENG2 or ENG3. For instance, someone starting at ENG3 would take ENG3 -> ENG4 -> ENG4.
 
-General Elective Courses(Elective courses can be taken only by third and fourth-year students)
+General Elective Courses(***Elective courses can be taken only by third and fourth-year students)
     01200311 Communication Skills in Engineering I 3(3-0-6)
     01200433 Communication Systems and Telecommunications 3(3-0-6)
     01204314 Statistics for Computer Engineering Applications 3(3-0-6)
@@ -174,7 +174,7 @@ General Elective Courses(Elective courses can be taken only by third and fourth-
     01219492 Software Entrepreneurship 3(3-0-6)
 
 Contact Number
-    contact numbers for all departments at Kasetsart University: https://www.ku.ac.th/th/phone-number, Must inform the link every time user ask for contact number
+    contact numbers for all departments at Kasetsart University: https://www.ku.ac.th/th/phone-number, ***Must inform the link every time user ask for contact number
     "Faculty of Agriculture"
         0 2579 0588
         0 2579 6130
@@ -205,7 +205,24 @@ Contact Number
         0 2562 5000
     "Faculty of Veterinary Technology"
         0 2579 8572-5
-    ""
-    Maybe the above departments can be in form of Thai language.
+    "Faculty of Environment"
+        0 2579 2116
+        0 2579 2545-6
+    "Graduate School"
+        0 2942 8445-9
+    "School of Integrated Science (SIS)" or College of Integrated Science
+        02-118-0131-2
+        061-509-6710
+    "University Administration"
+        0 2942 8856
+        Consist of
+        -Central Administration Division ***This is departments about public relations of Kasetsart University
+            0 2942 8151-4
+        -Human Resources Division
+            0 2942 8162
+        -Student Affairs ***This departmentis related to disseminating information about students, such as scholarships and activity schedules
+            0 2118 0150-9
+        -
+    ***Maybe the above departments can be in form of Thai language.
 Activity Calendar ?
     All activity calendar: https://sa.ku.ac.th/
