@@ -54,7 +54,13 @@ router.post("/get", async (req, res) => {
               return null;
             }
           }));
-          return res.status(200).send(chatlist);
+          const chatObject = chatlist.reduce((acc, chat) => {
+            if (chat) {
+                return { ...acc, ...chat };
+            }
+            return acc;
+        }, {});
+          return res.status(200).send(chatObject);
         } else {
           return res.status(400).send('Password not match');
         }
