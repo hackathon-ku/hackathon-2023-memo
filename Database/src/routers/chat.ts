@@ -1,6 +1,7 @@
 import express from 'express'
 import Chat from '../models/chat'
 import Message from '../models/message'
+import User from '../models/user'
 import { async } from '@firebase/util'
 import { createSchema } from '../schemas/message'
 import { string } from 'zod'
@@ -67,7 +68,13 @@ router.post('/create/:chatname', async (req, res) => {
         if (!chat) {
             return res.status(400).send('Chat not found')
         }
-        return res.status(200).send(chat)
+        const user = await User.findOne({username: messageData.data.username})
+        if (!user) {
+            return res.status(400).send('User not found')
+        }
+        user.chat_id.push(chat._id)
+        const response = await user.save()
+        return res.status(200).send(response)
     } catch (error) {
         return res.status(500).send(error)
     }

@@ -44,10 +44,16 @@ router.post("/get", async (req, res) => {
     if (user) {
       bcrypt.compare(getData.data.password, user.password, async function(err: any, result: any) {
         if (result) {
-          const chatlist = user.chat_id.map(async (chat_id) => {
-            const chat = await Chat.findById(chat_id);
-            return chat ? {[chat_id] : chat.name} : null; 
-          })
+          const chatlist = await Promise.all(user.chat_id.map(async (chat_id) => {
+            try {
+              const chat = await Chat.findById(chat_id);
+              return chat ? { [chat_id]: chat.name } : null;
+            } catch (error: any) {
+              // Handle errors (e.g., logging, responding with an error)
+              console.error(`Error fetching chat with id ${chat_id}:`, error.message);
+              return null;
+            }
+          }));
           return res.status(200).send(chatlist);
         } else {
           return res.status(400).send('Password not match');
