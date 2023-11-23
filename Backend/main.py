@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from routers import message
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 import requests
 import os
 import dotenv
@@ -12,6 +13,13 @@ class LoginSchema(BaseModel):
     password: str
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+    allow_credentials=True,
+)
 
 @app.get("/")
 def read_root():
