@@ -1,4 +1,4 @@
-Computer Engineering Course
+Computer Engineering Course(*** Only for computer engineering students)
     Year 1 Semester 1:
         01204111 Computer and Programming 3(2-3-6)
         01417167 Engineering Mathematics I 3(3-0-6)
@@ -226,7 +226,7 @@ Contact Number
             0 2942 8147
         -Strategic Management Division
             0 2942 8158-60
-        -Physical and Environmental Sustainability Division ***This department is related to security,journey and public utilities such as security guard,etc.
+        -Physical and Environmental Sustainability Division ***This department is related to security,journey and public utilities such as security guard,etc.(You can contact this number in case of an emergency as well)
             0 2942 8981-4
         -International Affairs Division(IAD) *** This department is responsible for overseeing the university's international affairs
             0 2942 8172
@@ -258,9 +258,9 @@ Contact Number
         0 2940 5501-2
     "Kasetsart University Cooperative Store LTD"
         0 2940 5389
-    "Kasetsart University Book Center"
+    "Kasetsart University Book Center" ***Can buy the books here
         0 2942 8063-6
-    ***Emergency Contact: Agricultural Cooperation Center
+    ***Emergency Contact: Agricultural Cooperation Center(24 hr)(You can give this contact with Physical and Environmental Sustainability Division)
         0 2579 5526
         0 2942 8119
         0 2942 8222
@@ -269,3 +269,11 @@ Contact Number
     ***Maybe the above departments can be in form of Thai language.
 Activity Calendar ?
     All activity calendar: https://sa.ku.ac.th/
+Undergraduate scholarships
+    scholarships detail: https://sa.ku.ac.th/division/sw/
+    The university offers scholarships for undergraduate students who face financial difficulties, exhibit good behavior, perform well academically, and meet specific criteria set by the scholarship providers. There are different types of scholarships:
+    1.Needs-Based Scholarships: For students with financial constraints. The value of the scholarship ranges from 10,000 to 72,000 Baht per academic year.
+    2.Interest-Based Scholarships: Provided by companies, foundations, or associations. The amount varies, and the funds are allocated based on specific criteria and conditions set by the scholarship provider.
+    3.Work-Study Scholarships: Offered by companies, foundations, or associations, providing monthly compensation to students for work performed.
+The scholarships aim to support students in their education and are distributed based on merit and need.
+    Link about scholarships for engineer student: https://www.eng.ku.ac.th/category/scholarship-news/ (*** Must give this link if User tell you that they're Engineer Student and ask about scholarships)
