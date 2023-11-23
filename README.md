@@ -14,3 +14,16 @@ git add .
 git commit -m "<commit_message>"
 git push -u origin main
 ```
+
+<h2>Feature Name: KU Assistant</h2>
+
+**รายชื่อสมาชิก**
+
+    1.นายณฐพล พลนาการ 6410500220 
+    2.นายวรกร โฆษิตโภคิน 6410500327  
+    3.นายพชรพล ราชสภา 6410501099
+    4.นายชนาธิป พูลสวัสดิ์ 6510602229
+คำอธิบาย: ฟีเจอร์สำหรับตอบคำถามหรือข้อของสงสัยของนิสิต KU ในด้านต่างๆ ทั้งในด้านการเรียน ความปลอดภัย หรือ ช่องทางการติดต่ของหน่วยงานต่างๆ เป็นต้น โดยตัวฟีเจอร์จะเป็น Chatgpt-based web application คือการนำ api ของopenai มาใช้กับข้อมูลในม.เกษตรของเรานั่นเอง
+**ภาพตัวอย่าง**
+<img >
+**Figma Link:** https://www.figma.com/file/Zn1zRBnNfk3PrXd2Dx6fO3/Nisit-KU?type=design&node-id=0%3A1&mode=dev

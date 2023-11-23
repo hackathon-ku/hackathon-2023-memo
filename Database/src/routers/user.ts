@@ -71,4 +71,31 @@ router.post("/get", async (req, res) => {
   }
 })
 
+router.get("/history/:username", async (req, res) => {
+  try {
+    const user = await User.findOne({
+      username: req.params?.username,
+    })
+    if (user) {
+          const chatlist = await Promise.all(user.chat_id.map(async (chat_id) => {
+            try {
+              const chat = await Chat.findById(chat_id);
+              return chat ? { [chat_id]: chat.name } : null;
+            } catch (error: any) {
+              // Handle errors (e.g., logging, responding with an error)
+              console.error(`Error fetching chat with id ${chat_id}:`, error.message);
+              return null;
+            }
+          }));
+          const chatObject = chatlist.reduce((acc, chat) => chat ? { ...acc, ...chat } : acc, {});
+          return res.status(200).send(chatObject);
+      } else {
+      return res.status(400).send('User not found');
+    }
+  }
+  catch (error) {
+    return res.status(500).send(error);
+  }
+})
+
 export default router;
