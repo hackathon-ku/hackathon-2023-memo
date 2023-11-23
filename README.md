@@ -15,7 +15,7 @@ git commit -m "<commit_message>"
 git push -u origin main
 ```
 
-<h2>Feature Name: KU Assistant</h2>
+<h2>Feature Name: KU Assistant กลุ่ม Memo</h2>
 
 **รายชื่อสมาชิก**
 
