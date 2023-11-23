@@ -59,6 +59,7 @@ def history(username: str):
 
 @app.get("/chat/{chatId}")
 def get_chat(chatId: str):
+    print(chatId)
     # Fetch chat from database
     # IF chatId matches, return chat data that contain all messages ex.
     #   username: string
@@ -68,7 +69,7 @@ def get_chat(chatId: str):
     #   uid?: string
     # ELSE return 400 error message
     try:
-        response = requests.get(os.getenv("MONGODB") + "/chat/" + chatId)
+        response = requests.get(os.getenv("MONGODB") + "chat/" + chatId)
         if response.status_code == 200:
             chatdata = response.json()
             return JSONResponse(status_code=response.status_code, content=chatdata)

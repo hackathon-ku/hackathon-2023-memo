@@ -4,7 +4,7 @@ import {MdHistory} from 'react-icons/md';
 import * as React from 'react';
 import {TextareaAutosize} from '@mui/base/TextareaAutosize';
 import {FaArrowRight} from 'react-icons/fa';
-import {styled} from '@mui/material';
+import {styled, unstable_ClassNameGenerator} from '@mui/material';
 import {useEffect, useRef, useState} from 'react';
 import Message, {MessageProps, testData} from '@/components/Messages';
 import {useRouter, useSearchParams} from 'next/navigation';
@@ -29,16 +29,20 @@ const Chat = () => {
     }, []);
     useEffect(() => {
         (async () => {
-            if (chatID !== 'newChat' && !chatID) {
+                console.log(chatID)
+                console.log( chatID !== 'newChat')
+            if (chatID !== 'newChat' ) {
+                console.log("test")
                 try {
                     const data = (await baseUrl.get(`/chat/${chatID}`)).data as MessageProps[]
+                    console.log(data)
                     const formatData = data.map((data) => {
                         return {
                             ...data,
                             firstload: true
                         }
                     })
-                    setDataChat(formatData)
+                    setDataChat([...testData,...formatData])
                     } catch (e) {
                         console.log(e)
                         setLoading(false)

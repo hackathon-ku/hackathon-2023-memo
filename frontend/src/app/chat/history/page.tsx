@@ -26,7 +26,7 @@ interface HistoryData {
     [key: string]: string
 }
 const History = () => {
-    const {username} = useUserStore(state => ({username: state.username}))
+    const {username,setChat} = useUserStore(state => ({username: state.username,setChat:state.setChat}))
     const  {data,error,isLoading} = useSWR<HistoryData>(`/history/${username}`, fetcher)
     const router = useRouter();
     const [isReady, setIsReady] = useState(false);
@@ -34,10 +34,13 @@ const History = () => {
     useEffect(() => {
         setIsReady(true);
     }, []);
-
+    useEffect(() => {
+        setChat(data as HistoryData)
+    }, [data]);
     const {chat} = useUserStore((state) => ({
         chat: state.chat,
     }));
+    // console.log(data)
 
 return (
     <div className="flex flex-col w-screen h-screen ">
@@ -53,19 +56,22 @@ return (
             </div>
         </div>
         <div className="flex-grow overflow-y-scroll max-h-[100%] ">
-            <div className="p-4">
+            <div className="p-4 h-full" >
                 <SearchInput className='h-14 mb-14'/>
-                {
-                    Object.keys(data||{})?.map((key, index) => {
-                        return (
-                            <CardHistory
-                                key={index}
-                                chatId={key}
-                                name={chat[key]}
-                            />
-                        )
-                    })
-                }
+                <div className={"flex flex-col gap-4 h-full overflow-y-scroll "}>
+                    {
+                        Object.keys(data||{})?.map((key, index) => {
+                            return (
+                                <CardHistory
+                                    key={index}
+                                    chatId={key}
+                                    name={data![key]}
+                                />
+                            )
+                        })
+                    }
+                </div>
+
             </div>
         </div>
     </div>
