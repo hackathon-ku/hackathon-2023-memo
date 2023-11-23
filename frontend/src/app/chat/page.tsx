@@ -4,12 +4,13 @@ import {MdHistory} from 'react-icons/md';
 import * as React from 'react';
 import {TextareaAutosize} from '@mui/base/TextareaAutosize';
 import {FaArrowRight} from 'react-icons/fa';
-import {styled} from '@mui/material';
+import {styled, unstable_ClassNameGenerator} from '@mui/material';
 import {useEffect, useRef, useState} from 'react';
 import Message, {MessageProps, testData} from '@/components/Messages';
 import {useRouter, useSearchParams} from 'next/navigation';
 import baseUrl from "@/config/baseUrl";
 import useUserStore from "@/stores/UserStore";
+import { log } from 'console';
 
 
 const Chat = () => {
@@ -28,16 +29,20 @@ const Chat = () => {
     }, []);
     useEffect(() => {
         (async () => {
-            if (chatID !== 'newChat' && !chatID) {
+                console.log(chatID)
+                console.log( chatID !== 'newChat')
+            if (chatID !== 'newChat' ) {
+                console.log("test")
                 try {
                     const data = (await baseUrl.get(`/chat/${chatID}`)).data as MessageProps[]
+                    console.log(data)
                     const formatData = data.map((data) => {
                         return {
                             ...data,
                             firstload: true
                         }
                     })
-                    setDataChat(formatData)
+                    setDataChat([...testData,...formatData])
                     } catch (e) {
                         console.log(e)
                         setLoading(false)
@@ -63,6 +68,8 @@ const Chat = () => {
         try {
             setLoading(true)
             if(searchParams.get('chatId') === 'newChat'||!searchParams.get('chatId')) {
+                console.log("test send")
+                setMessage("")
                 const data = (await baseUrl.post('/message/start', {
                     username,
                     message
@@ -71,9 +78,17 @@ const Chat = () => {
                     thread_id: string
                 }
                 setLoading(false)
-                setMessage("")
+                setDataChat((prev) => [
+                    ...prev,
+                    {
+                        username: "KU Assistant",
+                        content: data.message,
+                        isNotGPT: false,
+                    }
+                ]);
                 router.push(`/chat?chatId=${data.thread_id}`)
             }else{
+                setMessage("")
                 const data = (await baseUrl.post('/message/message', {
                     username,
                     message,
@@ -83,7 +98,6 @@ const Chat = () => {
 
                 }
                 setLoading(false)
-                setMessage("")
                 setDataChat((prev) => [
                     ...prev,
                     {
@@ -145,7 +159,7 @@ const Chat = () => {
                         }
                     )
                     }
-                    {loading &&  <Message islast username={"KU Assistant"} content={""} isNotGPT={false} />}
+                    {loading &&  <Message islast username={"KU Assistant"} content={"loading..."} isNotGPT={false} />}
                     <div ref={messageEndRef}>
                     </div>
                 </div>

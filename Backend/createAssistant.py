@@ -11,7 +11,7 @@ client = OpenAI(
 
 assistant = client.beta.assistants.create(
     name="KU_Assistant",
-    instructions="You are a assistant that will recommend to a student as short as possible or with a dot format",
+    instructions="You are an assistant that will recommend to a student as short as possible or with a dot format",
     model="gpt-4-1106-preview",
 )
 

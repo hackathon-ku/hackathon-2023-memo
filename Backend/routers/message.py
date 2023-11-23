@@ -17,6 +17,7 @@ class MessageSchema(BaseModel):
     
 @router.post("/start")
 def start_message(message: StartMessageSchema):
+    print(message)
     #create thread and send message to GPT-3.5 then run 
     #save chat data to database
     #return thread_id and reply message
@@ -24,15 +25,18 @@ def start_message(message: StartMessageSchema):
         userInput = message.message
         topic = get_Topic(userInput)
         thread, run = create_thread_and_run(userInput)
+        print('thread', thread)
         run = wait_on_run(run, thread)
         
         GPTresponse = get_GPT_response(thread)
-        
-        createChat = requests.post(os.getenv("MONGODB") + "/chat/create/" + topic, json={"username": message.username, "content": userInput, "isNotGPT": True, "type": "text", "chatid": thread.id})
+        print('GPTresponse', GPTresponse)
+
+        createChat = requests.post(os.getenv("MONGODB") + "chat/create/" + topic, json={"username": message.username, "content": userInput, "isNotGPT": True, "type": "text", "chatid": thread.id})
+        print('Create Chat', createChat)
         if createChat.status_code != 200:
             return JSONResponse(status_code=createChat.status_code, content="Created Chat Error")
         
-        sendResponse = requests.post(os.getenv("MONGODB") + "/message/create/", json={"username": "KU-Assistant", "content": GPTresponse, "isNotGPT": False, "type": "text", "chatid": thread.id})
+        sendResponse = requests.post(os.getenv("MONGODB") + "message/create/", json={"username": "KU-Assistant", "content": GPTresponse, "isNotGPT": False, "type": "text", "chatid": thread.id})
         if sendResponse.status_code != 200:
             return JSONResponse(status_code=sendResponse.status_code, content="Send Response Error")
         
@@ -48,7 +52,7 @@ def send_message(message: MessageSchema):
     try:
         userInput = message.message
         thread = get_thread(message.thread_id)
-        sendUserMessage = requests.post(os.getenv("MONGODB") + "/message/create", json={"username": message.username, 
+        sendUserMessage = requests.post(os.getenv("MONGODB") + "message/create", json={"username": message.username,
                                                                                         "content": userInput, 
                                                                                         "isNotGPT": True, 
                                                                                         "type": "text", 
@@ -59,7 +63,7 @@ def send_message(message: MessageSchema):
         run = wait_on_run(run, thread)
         GPTresponse = get_GPT_response(thread)
 
-        sendResponse = requests.post(os.getenv("MONGODB") + "/message/create/", json={"username": "KU-Assistant", "content": GPTresponse, "isNotGPT": False, "type": "text", "chatid": thread.id})
+        sendResponse = requests.post(os.getenv("MONGODB") + "message/create/", json={"username": "KU-Assistant", "content": GPTresponse, "isNotGPT": False, "type": "text", "chatid": thread.id})
         if sendResponse.status_code != 200:
             # Should delete created chat above
             return JSONResponse(status_code=sendResponse.status_code, content="Send Response Error")

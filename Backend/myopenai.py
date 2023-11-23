@@ -42,12 +42,11 @@ def get_response(thread):
     return client.beta.threads.messages.list(thread_id=thread.id, order="asc")
 
 def get_GPT_response(thread):
-    Resmessages = []
-    messages = client.beta.threads.messages.list(thread_id=thread.id, order="asc")
+    # Resmessages = []
+    messages = client.beta.threads.messages.list(thread_id=thread.id, order='desc')
     for m in messages:
         if m.role == "assistant":
-            Resmessages.append(m.content[0].text.value)
-    return "\n".join(Resmessages) + "\n"
+            return m.content[0].text.value
     
 def pretty_print(messages):
     print("# Messages")
@@ -64,17 +63,21 @@ def wait_on_run(run, thread):
         time.sleep(0.5)
     return run
 
-# thread1, run1 = create_thread_and_run(
+# thread1, run2 = create_thread_and_run(
 #     "What I should enroll in year 3 semester 2"
 # )
-# run1 = wait_on_run(run1, thread1)
-# pretty_print(get_response(thread1))
-
-# Wait for Run 1
+# run2 = wait_on_run(run2, thread1)
 # print(get_GPT_response(thread1))
 
-# run2 = submit_message(os.getenv("ASSISTANT_ID"), thread1, "Thank you!")
-# run2 = wait_on_run(run2, thread1)
-# pretty_print(get_response(thread1))
+# print("=========================================")
 
-# print(get_Topic("I don't like math. What can I do?"))
+# run2 = submit_message(os.getenv("ASSISTANT_ID"), thread1, "how about year 2 semester 1?")
+# run2 = wait_on_run(run2, thread1)
+# print(get_GPT_response(thread1))
+
+# print("=========================================")
+
+
+# run2 = submit_message(os.getenv("ASSISTANT_ID"), thread1, "THX")
+# run2 = wait_on_run(run2, thread1)
+# print(get_GPT_response(thread1))
