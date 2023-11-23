@@ -64,17 +64,16 @@ def wait_on_run(run, thread):
         time.sleep(0.5)
     return run
 
-# thread1, run1 = create_thread_and_run(
-#     "What I should enroll in year 3 semester 2"
-# )
-# run1 = wait_on_run(run1, thread1)
-# pretty_print(get_response(thread1))
+thread1, run2 = create_thread_and_run(
+    "What I should enroll in year 3 semester 2"
+)
+run2 = wait_on_run(run2, thread1)
+print(get_GPT_response(thread1))
 
-# Wait for Run 1
-# print(get_GPT_response(thread1))
+run2 = submit_message(os.getenv("ASSISTANT_ID"), thread1, "how about year 2 semester 1?")
+run2 = wait_on_run(run2, thread1)
+print(get_GPT_response(thread1))
 
-# run2 = submit_message(os.getenv("ASSISTANT_ID"), thread1, "Thank you!")
-# run2 = wait_on_run(run2, thread1)
-# pretty_print(get_response(thread1))
-
-# print(get_Topic("I don't like math. What can I do?"))
+run2 = submit_message(os.getenv("ASSISTANT_ID"), thread1, "THX")
+run2 = wait_on_run(run2, thread1)
+print(get_GPT_response(thread1))
