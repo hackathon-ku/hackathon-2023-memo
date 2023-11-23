@@ -2,3 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.blink-cursor {
+    display: inline;
+    animation: blink 1s step-start infinite;
+}
