@@ -34,12 +34,14 @@ router.post("/create", (req, res) => {
 
 router.post("/get", async (req, res) => {
   try {
+    console.log(req.body)
     const getData = GetSchema.safeParse(req.body)
     if (!getData.success) {
       return res.status(400).send('Body not match')
     }
     const user = await User.findOne({
       username: getData.data.username,
+
     })
     if (user) {
       bcrypt.compare(getData.data.password, user.password, async function(err: any, result: any) {

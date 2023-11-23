@@ -31,10 +31,15 @@ def login(loginData: LoginSchema):
     # IF Password matches, return user data that contain all chatid and chatname ex. {"chat": [{"chatid": "chatname"}], "isauth": true}
     # ELSE return DB error message
     try:
-        response = requests.post(os.getenv("MONGODB") + "/user/get", json={"username": loginData.username, "password": loginData.password})
+        print(loginData)
+        print(os.getenv("MONGODB") + "user/get")
+        response = requests.post(os.getenv("MONGODB") + "user/get", json={"username": loginData.username, "password": loginData.password})
+
         if response.status_code == 200:
+            print("pass")
             content = response.json()
-            content["is_auth"] = True 
+            content["is_auth"] = True
+            print(content)
             return JSONResponse(status_code=response.status_code, content=content)
         return JSONResponse(status_code=response.status_code, content={"isauth": False})
     except:
