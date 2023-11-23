@@ -1,6 +1,6 @@
 
 import { Avatar } from '@mui/material';
-import React, { useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import { AiOutlineFileText } from 'react-icons/ai';
 
 
@@ -11,6 +11,30 @@ export type MessageProps = {
   isNotGPT: boolean;
   type?: 'text';
   uid?: string;
+  loading?: boolean;
+  firstload?: boolean;
+};
+const TypingEffect = ({ message,loading }:{ message:string,loading:boolean }) => {
+  const [displayedText, setDisplayedText] = useState('');
+  const typingSpeed = 20; // Speed in milliseconds
+  const [stillTyping, setStillTyping] = useState(true);
+  useEffect(() => {
+    // console.log(loading)
+    if (message.length > displayedText.length) {
+      const timer = setTimeout(() => {
+        setDisplayedText(message.slice(0, displayedText.length + 1));
+      }, typingSpeed);
+      return () => clearTimeout(timer);
+    }
+    setStillTyping(false);
+  }, [displayedText, message]);
+  return (
+      <div className="typing-effect">
+        {displayedText}
+        {loading && <span className="blink-cursor">|</span>}
+        {!loading && stillTyping && (<span className="blink-cursor">|</span>)}
+      </div>
+  );
 };
 
 const Message: React.FC<MessageProps> = ({
@@ -19,26 +43,13 @@ const Message: React.FC<MessageProps> = ({
   isNotGPT,
   type = 'text',
   uid,
+  loading = false,
+  firstload
 }) => {
-  
-//   const [userEachMessage, setUserEachMessage] =
-//     React.useState<IUserInProject>();
-//   const currentProject = useProjectStore((state) => state.currentProject);
-//   useEffect(() => {
-//     if (currentProject && uid) {
-//       const allUser = [
-//         ...currentProject.advisee,
-//         ...currentProject.advisors,
-//         ...currentProject.co_advisors,
-//       ] as IUserInProject[];
-//       // console.log("allUser",allUser)
-//       const user = allUser.find((user: IUserInProject) => user._id === uid);
-//       // console.log("user",user)
-//       setUserEachMessage(user);
-//     }
-//   }, [uid, currentProject]);
 
-  
+  console.log("firstload",firstload)
+  console.log("loading",loading)
+
   return (
     <div
       className={`flex ${
@@ -51,7 +62,11 @@ const Message: React.FC<MessageProps> = ({
         }`}
       >
         <p className={"text-sm text-gray-600"+(isNotGPT ? 'bg-teal-600 text-white text-right ' : 'bg-gray-200 text-black')}>{username}</p>
-        <p className="whitespace-pre-line">{content as string}</p>
+        <div className="whitespace-pre-line">
+          {
+            !isNotGPT ? (firstload? content:<TypingEffect loading={loading} message={content}/>):content
+          }
+        </div>
       </div>
     </div>
   );
@@ -63,10 +78,5 @@ export const  testData : MessageProps[]=[
     isNotGPT:false
 
   },
-  {
-    username:"test",
-    content:"I want to know what is cat",
-    isNotGPT:true
-  }
 ]
 export default Message;

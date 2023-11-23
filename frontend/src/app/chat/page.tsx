@@ -7,47 +7,101 @@ import {FaArrowRight} from 'react-icons/fa';
 import {styled} from '@mui/material';
 import {useEffect, useRef, useState} from 'react';
 import Message, {MessageProps, testData} from '@/components/Messages';
-import {useRouter} from 'next/navigation';
+import {useRouter, useSearchParams} from 'next/navigation';
+import baseUrl from "@/config/baseUrl";
+import useUserStore from "@/stores/UserStore";
 
 
 const Chat = () => {
+    const searchParams = useSearchParams()
     const [dataChat, setDataChat] = useState<MessageProps[]>(testData);
     const messageEndRef = useRef<HTMLDivElement>(null);
     const router = useRouter();
     const [isReady, setIsReady] = useState(false);
-
     const [message, setMessage] = useState<string>("")
-
+    const {username} = useUserStore(state => ({username: state.username}))
+    const [loading, setLoading] = useState(false);
+    const chatID = searchParams.get('chatId')
     // useEffect to update state after component mounts
     useEffect(() => {
         setIsReady(true);
     }, []);
-    const handelSubmit = () => {
+    useEffect(() => {
+        (async () => {
+            if (chatID !== 'newChat' && !chatID) {
+                try {
+                    const data = (await baseUrl.get(`/chat/${chatID}`)).data as MessageProps[]
+                    const formatData = data.map((data) => {
+                        return {
+                            ...data,
+                            firstload: true
+                        }
+                    })
+                    setDataChat(formatData)
+                    } catch (e) {
+                        console.log(e)
+                        setLoading(false)
+                    }
+                }
+
+        }
+        )()
+    }, []);
+    const handelSubmit = async () => {
         if (!message) return
         console.log(message)
         setDataChat((prev) => [
             ...prev,
             {
-                username: 'You',
+                username: username,
                 content: message,
                 isNotGPT: true,
             }
         ]);
-        setDataChat((prev) =>[
-            ...prev,
-            {
-                username: 'KU Assistant',
-                content: 'Hello',
-                isNotGPT: false,
+        try {
+            setLoading(true)
+            if(searchParams.get('chatId') === 'newChat'||!searchParams.get('chatId')) {
+                const data = (await baseUrl.post('/message/start', {
+                    username,
+                    message
+                })).data as {
+                    message: string,
+                    thread_id: string
+                }
+                setLoading(false)
+                setMessage("")
+                router.push(`/chat?chatId=${data.thread_id}`)
+            }else{
+                const data = (await baseUrl.post('/message/message', {
+                    username,
+                    message,
+                    thread_id: searchParams.get('chatId')
+                })).data as {
+                    message: string,
+
+                }
+                setLoading(false)
+                setMessage("")
+                setDataChat((prev) => [
+                    ...prev,
+                    {
+                        username: "KU Assistant",
+                        content: data.message,
+                        isNotGPT: false,
+                    }
+                ]);
             }
-            ]
-        )
-        setMessage("")
+
+        } catch (e) {
+            console.log(e)
+            setMessage("")
+            setLoading(false)
+        }
 
     }
     useEffect(() => {
         if (messageEndRef.current) {
-            messageEndRef.current.scrollIntoView({ behavior: 'smooth' });
+            messageEndRef.current.scrollIntoView({behavior: 'smooth'});
         }
     }, [dataChat]);
     return (
@@ -60,20 +114,35 @@ const Chat = () => {
                 </div>
                 <div>KU Assistant</div>
                 <div>
-                    <MdHistory size={25} onClick={() => router.push('/chat/history')}/>
+                    <MdHistory size={25} className={"cursor-pointer"} onClick={() => router.push('/chat/history')}/>
                 </div>
             </div>
             <div className="flex-grow overflow-y-scroll max-h-[calc(100% - 7rem)] ">
                 <div className="p-4">
-                    {dataChat.map((data, index) => (
-                        <Message
-                            key={index}
-                            username={data?.username}
-                            content={data?.content}
-                            isNotGPT={data?.isNotGPT}
-                            uid={data?.uid}
-                        />
-                    ))}
+                    {dataChat.map((data, index) => {
+                            if (index === dataChat.length - 1 && !data?.isNotGPT) {
+                                return <Message
+                                    loading={loading}
+                                    key={index}
+                                    username={data?.username}
+                                    content={data?.content}
+                                    isNotGPT={data?.isNotGPT}
+                                    uid={data?.uid}
+                                    firstload={data?.firstload}
+                                />
+
+                            }
+                            return <Message
+                                firstload={data?.firstload}
+                                key={index}
+                                username={data?.username}
+                                content={data?.content}
+                                isNotGPT={data?.isNotGPT}
+                                uid={data?.uid}
+                            />
+                        }
+                    )
+                    }
                     <div ref={messageEndRef}>
                     </div>
                 </div>
@@ -104,7 +173,8 @@ const Chat = () => {
                 </div>
             </div>
         </div>
-    );
+    )
+        ;
 };
 
 export default Chat;

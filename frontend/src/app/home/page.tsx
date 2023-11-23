@@ -8,12 +8,13 @@ import {useRouter} from "next/navigation";
 const Home = () => {
     const router = useRouter()
 
+
     return (
         <div className="w-screen h-screen flex flex-col ">
             <div className={"h-[10%]"}></div>
             <div className={"flex flex-wrap p-4 h-3/6 gap-y-1 justify-between  content-start"}>
                 <div className={"w-1/3 h-32 cursor-pointer"} onClick={()=>{
-                    router.push("/chat")
+                    router.push("/chat?chatId=newChat")
                 }} >
                     <CardIcon link={"/KuAssistant.JPG"} iconName={"KU Assistant"}/>
                 </div>
