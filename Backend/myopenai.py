@@ -31,7 +31,7 @@ def submit_message(assistant_id, thread, user_message):
         thread_id=thread.id, 
         role="user", 
         content=user_message,
-        file_ids=["file-DDdHTGKRav0sbCot8Am5LV9u"],
+        file_ids=[os.getenv("FILE_ID")],
     )
     return client.beta.threads.runs.create(
         thread_id=thread.id,
@@ -78,4 +78,3 @@ def wait_on_run(run, thread):
 # pretty_print(get_response(thread1))
 
 # print(get_Topic("I don't like math. What can I do?"))
-

@@ -47,15 +47,12 @@ def send_message(message: MessageSchema):
     #return reply message
     try:
         userInput = message.message
-        print(message.thread_id)
         thread = get_thread(message.thread_id)
-        print(type(thread.id), type(userInput), type(message.username))
         sendUserMessage = requests.post(os.getenv("MONGODB") + "/message/create", json={"username": message.username, 
                                                                                         "content": userInput, 
                                                                                         "isNotGPT": True, 
                                                                                         "type": "text", 
                                                                                         "chatid": thread.id})
-        print(sendUserMessage.status_code, sendUserMessage.content)
         if sendUserMessage.status_code != 200:
             return JSONResponse(status_code=sendUserMessage.status_code, content="Send User Message Error")
         run = submit_message(os.getenv("ASSISTANT_ID"), thread, userInput)
