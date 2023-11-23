@@ -46,7 +46,9 @@ const Chat = () => {
 
         }
         )()
-    }, []);
+    }, [
+        chatID
+    ]);
     const handelSubmit = async () => {
         if (!message) return
         console.log(message)
@@ -119,10 +121,10 @@ const Chat = () => {
             </div>
             <div className="flex-grow overflow-y-scroll max-h-[calc(100% - 7rem)] ">
                 <div className="p-4">
-                    {dataChat.map((data, index) => {
+                    {dataChat?.map((data, index) => {
                             if (index === dataChat.length - 1 && !data?.isNotGPT) {
                                 return <Message
-                                    loading={loading}
+                                    islast
                                     key={index}
                                     username={data?.username}
                                     content={data?.content}
@@ -143,6 +145,7 @@ const Chat = () => {
                         }
                     )
                     }
+                    {loading &&  <Message islast username={"KU Assistant"} content={""} isNotGPT={false} />}
                     <div ref={messageEndRef}>
                     </div>
                 </div>

@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const axiosBaseurl = axios.create({
-    baseURL: 'https://localhost:8080/',
-    withCredentials: true,
+    baseURL: 'http://localhost:8000/',
+
 });
 
 export default axiosBaseurl;

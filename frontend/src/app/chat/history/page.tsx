@@ -40,7 +40,7 @@ return (
             <div className="p-4">
                 <SearchInput className='h-14 mb-14'/>
                 {
-                    Object.keys(chat).map((key, index) => {
+                    Object.keys(chat)?.map((key, index) => {
                         return (
                             <CardHistory
                                 key={index}
