@@ -43,4 +43,4 @@ git push -u origin main
 สามารถเลือกหัวข้อที่เคยถามไปแล้วได้โดยการกดไปที่ข้อความ
 
 **Figma Link:** 
-https://www.figma.com/community/file/1309505216727004951/ku-assistant
+https://www.figma.com/file/Zn1zRBnNfk3PrXd2Dx6fO3/Nisit-KU?type=design&node-id=0%3A1&mode=design&t=laRwwWHw6dJT18GX-1
