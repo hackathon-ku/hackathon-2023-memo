@@ -45,6 +45,22 @@ def login(loginData: LoginSchema):
     except:
         return JSONResponse(status_code=500, content={"isauth": False})
 
+@app.post("/history/{username}")
+def history(username: str):
+    # Fetch user from database
+    # IF Password matches, return user data that contain all chatid and chatname ex. {"chat": [{"chatid": "chatname"}], "isauth": true}
+    # ELSE return DB error message
+    try:
+        response = requests.get(os.getenv("MONGODB") + "user/history" + username)
+        if response.status_code == 200:
+            print("pass")
+            content = response.json()
+            print(content)
+            return JSONResponse(status_code=response.status_code, content=content)
+        return JSONResponse(status_code=response.status_code)
+    except:
+        return JSONResponse(status_code=500)
+
 @app.get("/chat/{chatId}")
 def get_chat(chatId: str):
     # Fetch chat from database
