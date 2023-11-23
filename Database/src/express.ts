@@ -3,6 +3,7 @@ import dotenv from 'dotenv'
 import mongoose from 'mongoose'
 import chalk from 'chalk'
 import ms from 'ms'
+import router from './routers/routers'
 
 dotenv.config()
 
@@ -48,11 +49,8 @@ app.get('/', (req, res) => {
   res.send('Hello, Express with TypeScript!');
 });
 
-// app.use('/', router)
-
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
-});
+app.use(express.json())
+app.use('/', router)
 
 app.listen(port, () => {
   console.log(

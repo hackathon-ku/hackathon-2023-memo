@@ -1,6 +1,7 @@
 import express from 'express'
 import Chat from '../models/chat'
 import Message from '../models/message'
+import User from '../models/user'
 import { async } from '@firebase/util'
 import { createSchema } from '../schemas/message'
 import { string } from 'zod'
@@ -31,31 +32,32 @@ router.get('/:chat_id', async (req, res) => {
     }
 })
 
-router.post('/create/:tid/:chatname', async (req, res) => {
+// Create chat with chatname
+router.post('/create/:chatname', async (req, res) => {
     try{
-        const tid = req.params?.tid
         const chatname = req.params?.chatname
-        if (!tid) {
-            return res.status(400).send('Body not match')
-        }
-
-        const chatData: IChat = {
-            _id: tid,
-            name: chatname,
-            messages: [],
-            createdAt: new Date(),
-            updatedAt: new Date(),
+        if (!chatname) {
+            return res.status(400).send('Param not match')
         }
         const messageData = createSchema.safeParse(req.body)
         if (!messageData.success) {
             return res.status(400).send('Body not match')
         }
+
+        const chatData: IChat = {
+            _id: messageData.data.chatid,
+            name: chatname,
+            messages: [],
+            createdAt: new Date(),
+            updatedAt: new Date(),
+        }
+        
         const msg = await Message.create({
             username: messageData.data.username,
             content: messageData.data.content,
             isNotGPT: messageData.data.isNotGPT,
             type: messageData.data.type,
-            chatid: tid,
+            chatid: messageData.data.chatid,
             createdAt: new Date(),
             updatedAt: new Date(),
         })
@@ -67,6 +69,13 @@ router.post('/create/:tid/:chatname', async (req, res) => {
         if (!chat) {
             return res.status(400).send('Chat not found')
         }
+        const user = await User.findOne({username: messageData.data.username})
+        if (!user) {
+            return res.status(400).send('User not found')
+        }
+        user.chat_id.push(chat._id)
+        const response = await user.save()
+        return res.status(200).send(response)
     } catch (error) {
         return res.status(500).send(error)
     }
