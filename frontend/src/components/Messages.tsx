@@ -1,5 +1,5 @@
 import {Avatar} from '@mui/material';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {AiOutlineFileText} from 'react-icons/ai';
 
 
@@ -16,9 +16,11 @@ const TypingEffect = ({message}: { message: string }) => {
     const [displayedText, setDisplayedText] = useState('');
     const typingSpeed = 20; // Speed in milliseconds
     const [stillTyping, setStillTyping] = useState(true);
+    const endOfMessagesRef = useRef<HTMLDivElement>(null);
     useEffect(() => {
         // console.log(loading)
         if (message.length > displayedText.length) {
+
             const timer = setTimeout(() => {
                 setDisplayedText(message.slice(0, displayedText.length + 1));
             }, typingSpeed);
@@ -26,10 +28,14 @@ const TypingEffect = ({message}: { message: string }) => {
         }
         setStillTyping(false);
     }, [displayedText, message]);
+    useEffect(() => {
+        endOfMessagesRef.current?.scrollIntoView({behavior: 'smooth'});
+    }, [displayedText]);
     return (
         <div className="typing-effect">
             {displayedText}
-            {stillTyping && (<span className="blink-cursor">|</span>)}
+            {stillTyping && (<span  className="blink-cursor ">|</span>)}
+            <div ref={endOfMessagesRef} />
         </div>
     );
 };
