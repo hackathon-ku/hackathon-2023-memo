@@ -22,7 +22,7 @@ const fetcher = async (url: string) => {
         throw err;
     }
 };
-interface HistoryData {
+export interface HistoryData {
     [key: string]: string
 }
 const History = () => {
@@ -30,17 +30,27 @@ const History = () => {
     const  {data,error,isLoading} = useSWR<HistoryData>(`/history/${username}`, fetcher)
     const router = useRouter();
     const [isReady, setIsReady] = useState(false);
+    const [fillterData, setFillterData] = useState<{ key: string; value: string }[]>([]);
+
     // useEffect to update state after component mounts
     useEffect(() => {
         setIsReady(true);
     }, []);
     useEffect(() => {
         setChat(data as HistoryData)
+        setFillterData(Object.entries(data || {}).map(([key, value]) => ({ key, value })));
     }, [data]);
     const {chat} = useUserStore((state) => ({
         chat: state.chat,
     }));
     // console.log(data)
+    const handleSearchChange = (event: React.SyntheticEvent, value: string) => {
+        const filtered = Object.entries(data || {})
+            .filter(([key, val]) => val.toLowerCase().includes(value.toLowerCase()))
+            .map(([key, value]) => ({ key, value }));
+
+        setFillterData(filtered);
+    };
 
 return (
     <div className="flex flex-col w-screen h-screen ">
@@ -57,18 +67,15 @@ return (
         </div>
         <div className="flex-grow overflow-y-scroll max-h-[100%] ">
             <div className="p-4 h-full" >
-                <SearchInput className='h-14 mb-14'/>
+                <SearchInput className='h-14 mb-14' data={Object.values(data||{})} onChange={handleSearchChange}
+                />
                 <div className={"flex flex-col gap-4 h-full overflow-y-scroll "}>
                     {
-                        Object.keys(data||{})?.map((key, index) => {
-                            return (
-                                <CardHistory
-                                    key={index}
-                                    chatId={key}
-                                    name={data![key]}
-                                />
-                            )
-                        })
+
+                        fillterData.map((data, index) => {
+                            return <CardHistory key={index} chatId={data.key} name={data.value}/>
+                        }
+                        )
                     }
                 </div>
 

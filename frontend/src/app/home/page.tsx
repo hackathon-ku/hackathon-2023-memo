@@ -33,8 +33,12 @@ const Home = () => {
                 <div className={"w-1/3 h-32"}>
                     <CardIcon iconName={"Check in"}/>
                 </div>
-                <div className={"w-1/3 h-32"}>
-                    <CardIcon iconName={"Logout"}/>
+                <div onClick={()=>{
+                    router.push("/login")
+                    sessionStorage.clear()
+
+                }} className={"w-1/3 h-32 cursor-pointer"}>
+                    <CardIcon  iconName={"Logout"}/>
                 </div>
 
             </div>

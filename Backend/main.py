@@ -31,7 +31,7 @@ def login(loginData: LoginSchema):
     # IF Password matches, return user data that contain all chatid and chatname ex. {"chat": [{"chatid": "chatname"}], "isauth": true}
     # ELSE return DB error message
     try:
-        response = requests.post(os.getenv("MONGODB") + "/user/get", json={"username": loginData.username, "password": loginData.password})
+        response = requests.post(os.getenv("MONGODB") + "user/get", json={"username": loginData.username, "password": loginData.password})
         if response.status_code == 200:
             content = response.json()
             content["is_auth"] = True 
