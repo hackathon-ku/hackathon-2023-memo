@@ -56,6 +56,7 @@ const Chat = () => {
     ]);
     const handelSubmit = async () => {
         if (!message) return
+        if(loading) return
         console.log(message)
         setDataChat((prev) => [
             ...prev,
@@ -88,6 +89,7 @@ const Chat = () => {
                 ]);
                 router.push(`/chat?chatId=${data.thread_id}`)
             }else{
+                setMessage("")
                 const data = (await baseUrl.post('/message/message', {
                     username,
                     message,
