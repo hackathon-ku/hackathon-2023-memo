@@ -88,6 +88,7 @@ const Chat = () => {
                 ]);
                 router.push(`/chat?chatId=${data.thread_id}`)
             }else{
+                setMessage("")
                 const data = (await baseUrl.post('/message/message', {
                     username,
                     message,
@@ -97,7 +98,6 @@ const Chat = () => {
 
                 }
                 setLoading(false)
-                setMessage("")
                 setDataChat((prev) => [
                     ...prev,
                     {
