@@ -42,6 +42,10 @@ def login(loginData: LoginSchema):
 
 @app.get("/history/{username}")
 def history(username: str):
+    print(username)
+    # Fetch user from database
+    # IF Password matches, return user data that contain all chatid and chatname ex. {"chat": [{"chatid": "chatname"}], "isauth": true}
+    # ELSE return DB error message
     try:
         response = requests.get(os.getenv("MONGODB") + "user/history/" + username)
         if response.status_code == 200:
